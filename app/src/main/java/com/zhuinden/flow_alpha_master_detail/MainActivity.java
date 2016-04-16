@@ -85,12 +85,13 @@ public class MainActivity
     protected void restoreViewFromState(Traversal traversal, View view) {
         Log.i(TAG, "Restoring view state for " + view);
         State incomingState = traversal.getState(Flow.getKey(view.getContext()));
-        incomingState.restore(view);
-        if(view instanceof Bundleable) {
-            Log.i(TAG, "Restoring state from bundle for " + view);
-            ((Bundleable) view).fromBundle(incomingState.getBundle());
+        if(incomingState != null) {
+            incomingState.restore(view);
+            if(view instanceof Bundleable) {
+                Log.i(TAG, "Restoring state from bundle for " + view);
+                ((Bundleable) view).fromBundle(incomingState.getBundle());
+            }
         }
-
     }
 
     @Override
