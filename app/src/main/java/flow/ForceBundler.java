@@ -12,10 +12,12 @@ public class ForceBundler {
         if(internalLifeCycleIntegration != null) {
             KeyManager keyManager = internalLifeCycleIntegration.keyManager;
             for(View view : activeViews) {
-                State state = keyManager.getState(Flow.getKey(view));
-                state.save(view);
-                if(view instanceof Bundleable) {
-                    state.setBundle(((Bundleable) view).toBundle());
+                if(view != null) {
+                    State state = keyManager.getState(Flow.getKey(view));
+                    state.save(view);
+                    if(view instanceof Bundleable) {
+                        state.setBundle(((Bundleable) view).toBundle());
+                    }
                 }
             }
         }

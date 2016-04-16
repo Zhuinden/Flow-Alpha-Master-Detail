@@ -201,7 +201,7 @@ public class MainActivity
             View currentView = root.getChildAt(0);
             if(currentView instanceof MasterDetailContainer) {
                 MasterDetailContainer masterDetailContainer = (MasterDetailContainer) currentView;
-                ForceBundler.saveToBundle(this, masterDetailContainer.getMasterContainer(), masterDetailContainer.getDetailContainer());
+                ForceBundler.saveToBundle(this, masterDetailContainer.getMasterContainer().getChildAt(0), masterDetailContainer.getDetailContainer().getChildAt(0));
             } else if(currentView instanceof SinglePaneContainer) {
                 SinglePaneContainer singlePaneContainer = (SinglePaneContainer)currentView;
                 ForceBundler.saveToBundle(this, singlePaneContainer.getChildAt(0));
