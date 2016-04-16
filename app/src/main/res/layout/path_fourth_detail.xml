@@ -7,7 +7,7 @@
     <Button android:id="@+id/fourth_detail_start_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start detail"
+            android:text="Start fourth view second detail"
             android:layout_margin="20dp"
         />
 
