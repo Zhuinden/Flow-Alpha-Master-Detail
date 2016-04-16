@@ -171,8 +171,7 @@ public class MainActivity
                 masterDetailContainer.getDetailContainer().addView(destView);
                 View currentMasterView = masterDetailContainer.getMasterContainer().getChildAt(0);
                 if(currentMasterView == null) {
-                    Context masterContext = traversal.createContext(currentMaster,
-                            this); //create context to increment key count in key manager
+                    Context masterContext = traversal.createContext(currentMaster, this);
                     View masterView = LayoutInflater.from(masterContext)
                             .inflate(currentMaster.getLayout(), masterDetailContainer.getMasterContainer(), false);
                     restoreViewFromState(traversal, masterView);
