@@ -1,3 +1,7 @@
+** OBSOLETE**
+
+This was merged to https://github.com/Zhuinden/flowless as a sample.
+
 # Flow-Alpha-Master-Detail
 An initial implementation of Master-Detail layout with Flow 1.0-alpha.
 
