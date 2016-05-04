@@ -1,4 +1,4 @@
-** OBSOLETE**
+**OBSOLETE**
 
 This was merged to https://github.com/Zhuinden/flowless as a sample.
 
